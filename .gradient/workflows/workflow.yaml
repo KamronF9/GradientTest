@@ -24,7 +24,7 @@ jobs:
     inputs:
       repo: cloneRepo.outputs.repo
     outputs:
-      data:
+      data2:
         type: dataset
         with:
           ref: demo-dataset2
