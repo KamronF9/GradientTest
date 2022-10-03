@@ -16,7 +16,7 @@ jobs:
       url: context.event.github.url
       ref: context.event.github.ref
 
-  generateText:
+  runAlgo:
     resources:
       instance-type: C5
     needs:
@@ -24,7 +24,7 @@ jobs:
     inputs:
       repo: cloneRepo.outputs.repo
     outputs:
-      generatedText:
+      data:
         type: dataset
         with:
           ref: demo-dataset
