@@ -24,11 +24,17 @@ jobs:
     inputs:
       repo: cloneRepo.outputs.repo
     outputs:
-      data2:
+      generatedText:
         type: dataset
         with:
-          ref: demo-dataset2
+          ref: demo-dataset
     uses: script@v1
     with:
-      script: python /input/repo/hello.py
+      #script: |-
+        #cp -R /inputs/repo /nlp
+        #cd /nlp
+        #pip3 install -U transformers
+        #python3 nlp_text_generation.py
+        #mv output.txt /outputs/generatedText
+        #ls "-aFlR" /outputs/generatedText
       image: paperspace/transformers-gpu:0.4.0
