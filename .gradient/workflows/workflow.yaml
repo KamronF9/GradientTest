@@ -23,11 +23,11 @@ jobs:
       - cloneRepo
     inputs:
       repo: cloneRepo.outputs.repo
-    outputs:
-      data:
-        type: dataset
-        with:
-          ref: data2
+    #outputs:
+     # data:
+      #  type: dataset
+       # with:
+        #  ref: data2
     uses: script@v1
     with:
       script: python /input/repo/hello.py
