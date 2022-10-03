@@ -31,7 +31,7 @@ jobs:
     uses: script@v1
     with:
       script: |-
-        python /input/repo/hello.py
+        python /inputs/repo/hello.py
         #cp -R /inputs/repo .
         #cd /nlp
         #pip3 install -U transformers
