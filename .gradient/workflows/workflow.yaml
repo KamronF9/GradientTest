@@ -18,7 +18,7 @@ jobs:
 
   runAlgo:
     resources:
-      instance-type: C5
+      instance-type: P4000
     needs:
       - cloneRepo
     inputs:
