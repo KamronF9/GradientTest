@@ -38,5 +38,5 @@ jobs:
         #python3 nlp_text_generation.py
         #mv output.txt /outputs/generatedText
         #ls "-aFlR" /outputs/generatedText
-      image: trading
+      image: paperspace/trading
       #image: paperspace/transformers-gpu:0.4.0
