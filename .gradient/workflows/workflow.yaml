@@ -32,7 +32,7 @@ jobs:
     with:
       script: |-
         python /inputs/repo/hello.py
-        #cp -R /inputs/repo .
+        #cp -R /inputs/repo 
         #cd /nlp
         #pip3 install -U transformers
         #python3 nlp_text_generation.py
