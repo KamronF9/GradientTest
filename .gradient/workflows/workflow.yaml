@@ -27,7 +27,7 @@ jobs:
       data:
         type: dataset
         with:
-          ref: data2
+          ref: demo-dataset2
     uses: script@v1
     with:
       script: python /input/repo/hello.py
