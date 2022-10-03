@@ -10,5 +10,5 @@ hello = 'Hello, TensorFlow!'
 # Run the op
 #print(sess.run(hello))
 fpOut = open(r'/outputs/data/test.txt',"w")
-print(hello,file=fpOut)
+print(hello, file=fpOut)
 fpOut.close() 
