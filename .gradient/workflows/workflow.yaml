@@ -1,0 +1,34 @@
+on:
+  github:
+    branches:
+      only: main
+
+jobs:
+
+  cloneRepo:
+    resources:
+      instance-type: C4
+    outputs:
+      repo:
+        type: volume
+    uses: git-checkout@v1
+    with:
+      url: context.event.github.url
+      ref: context.event.github.ref
+
+  generateText:
+    resources:
+      instance-type: C5
+    needs:
+      - cloneRepo
+    inputs:
+      repo: cloneRepo.outputs.repo
+    outputs:
+      data:
+        type: dataset
+        with:
+          ref: data2
+    uses: script@v1
+    with:
+      script: python /input/repo/hello.py
+      image: paperspace/transformers-gpu:0.4.0
