@@ -31,7 +31,8 @@ jobs:
     uses: script@v1
     with:
       script: |-
-        cp -R /inputs/repo .
+        python /input/repo/hello.py
+        #cp -R /inputs/repo .
         #cd /nlp
         #pip3 install -U transformers
         #python3 nlp_text_generation.py
