@@ -3,13 +3,6 @@ on:
     branches:
       only: main
 
-defaults:
-  # Default instance type for all jobs
-  resources:
-    instance-type: C4
-    container-registries: # optional
-      - trading
-
 jobs:
 
   cloneRepo:
@@ -26,6 +19,8 @@ jobs:
   runAlgo:
     resources:
       instance-type: C4
+      container-registries: # optional
+        - trading
     needs:
       - cloneRepo
     inputs:
