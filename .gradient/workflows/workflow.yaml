@@ -3,6 +3,13 @@ on:
     branches:
       only: main
 
+defaults:
+  # Default instance type for all jobs
+  resources:
+    instance-type: C4
+    container-registries: # optional
+      - trading
+
 jobs:
 
   cloneRepo:
@@ -38,8 +45,4 @@ jobs:
         #python3 nlp_text_generation.py
         #mv output.txt /outputs/generatedText
         #ls "-aFlR" /outputs/generatedText
-      with:
-        image: kamrondocker/trading:r2
-        username: secret:DOCKUS
-        password: secret:DOCKPW
         #image: paperspace/transformers-gpu:0.4.0
