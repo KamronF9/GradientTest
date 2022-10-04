@@ -39,4 +39,6 @@ jobs:
         #mv output.txt /outputs/generatedText
         #ls "-aFlR" /outputs/generatedText
       image: kamrondocker/trading:r2
+        username: secret:DOCKUS
+        password: secret:DOCKPW
       #image: paperspace/transformers-gpu:0.4.0
