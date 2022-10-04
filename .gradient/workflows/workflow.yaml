@@ -20,7 +20,7 @@ jobs:
     resources:
       instance-type: C4
       container-registries: # optional
-        - trading
+        - kamrondocker/trading:r2
     needs:
       - cloneRepo
     inputs:
