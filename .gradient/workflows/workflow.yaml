@@ -19,8 +19,6 @@ jobs:
   runAlgo:
     resources:
       instance-type: C4
-      container-registries: # optional
-        - kamrondocker/trading:r2
     needs:
       - cloneRepo
     inputs:
@@ -40,4 +38,7 @@ jobs:
         #python3 nlp_text_generation.py
         #mv output.txt /outputs/generatedText
         #ls "-aFlR" /outputs/generatedText
+      image: kamrondocker/trading:r2
+      username: secret:DOCKUS
+      password: secret:DOCKPW
         #image: paperspace/transformers-gpu:0.4.0
