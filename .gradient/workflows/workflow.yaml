@@ -19,6 +19,8 @@ jobs:
   runAlgo:
     resources:
       instance-type: C4
+      container-registries: # optional
+        - my-registry
     needs:
       - cloneRepo
     inputs:
@@ -29,10 +31,6 @@ jobs:
         with:
           ref: demo-dataset
     uses: script@v1
-    with:
-      image: kamrondocker/trading:r2
-      username: secret:DOCKUS
-      password: secret:DOCKPW
       script: |-
         python /inputs/repo/hello.py
         #cp -R /inputs/repo 
