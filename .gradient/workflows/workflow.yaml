@@ -2,11 +2,6 @@ on:
   github:
     branches:
       only: main
-defaults:
-  image: kamrondocker/trading:r2
-  username: secret:DOCKUS
-  password: secret:DOCKPW
-
 
 jobs:
 
