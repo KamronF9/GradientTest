@@ -33,9 +33,7 @@ jobs:
       data:
         type: dataset
         with:
-          ref: demo-dataset
-    uses: container@v1
-    
+          ref: demo-dataset  
     uses: script@v1
     with:
       script: |-
