@@ -34,6 +34,8 @@ jobs:
         type: dataset
         with:
           ref: demo-dataset
+    uses: container@v1
+    
     uses: script@v1
     with:
       script: |-
@@ -45,5 +47,5 @@ jobs:
         #mv output.txt /outputs/generatedText
         #ls "-aFlR" /outputs/generatedText
       #image: bash:5
-      image: paperspace/trading
+      #image: paperspace/trading
       #image: paperspace/transformers-gpu:0.4.0
